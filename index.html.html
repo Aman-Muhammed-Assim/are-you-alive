@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Alive, Fimu?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Are you alive, Fimu?</h1>
+    <button class="yes" onclick="respond('yes')">Yes</button>
+    <button class="no" onclick="respond('no')">No</button>
+
+    <div id="output" class="message"></div>
+
+    <script>
+        function respond(answer) {
+            const output = document.getElementById('output');
+            if (answer === 'yes') {
+                output.textContent = 'Open Zepeto!';
+                output.style.color = 'green';
+            } else if (answer === 'no') {
+                alert('Error 404: Are you sure you’re not alive, Fimu?');
+                output.textContent = 'Are you alive, Fimu?';
+                output.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
